@@ -133,7 +133,8 @@ traefik_staticroutes = """
 
 # The Traefik dashboard
 [http.routers.api]
-  rule = "Host(`PAAS_DOMAIN`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))"
+  #rule = "Host(`PAAS_DOMAIN`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))"
+  rule = "Host(`traefik.PAAS_DOMAIN`)"
   entrypoints = ["web-secure"]
   service = "api@internal"
   middlewares = ["auth"]

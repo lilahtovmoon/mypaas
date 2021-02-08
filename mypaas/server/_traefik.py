@@ -106,7 +106,6 @@ traefik_config = """
 # Enable dashboard
 [api]
   dashboard = true
-  debug = true
 
 # Enable Let's Encrypt
 [certificatesResolvers.default.acme]

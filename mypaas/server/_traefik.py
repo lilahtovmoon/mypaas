@@ -112,6 +112,7 @@ traefik_config = """
 [certificatesResolvers.default.acme]
   email = "EMAIL"
   storage = "acme.json"
+  keyType = "EC256"
   [certificatesResolvers.default.acme.httpchallenge]
     entrypoint = "web"
 

@@ -334,7 +334,7 @@ def _deploy_scale(container_infos, deploy_dir, service_name, prepared_cmd, scale
     # based on the assumption that a container boots within 5 seconds.
     # In essence, we dont want to close the last old container before the first
     # new container is fully operational.
-    max_time_we_expect_a_container_to_boot = 5
+    max_time_we_expect_a_container_to_boot = 30
     pause_per_step = 1 + max_time_we_expect_a_container_to_boot / max(1, len(old_pool))
 
     try:
